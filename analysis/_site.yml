@@ -1,17 +1,28 @@
-name: "qltan_postdoc_note"
+name: Research Progress
 output_dir: ../docs
 navbar:
-  title: "qltan_postdoc_note"
+  title: Research Progress
   left:
   - text: Home
     href: index.html
+  - text: Progress
+    menu:
+    - text: 2025
+      href: 2025.html
+    - text: wflow_template
+      href: template.html
   - text: About
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/hmutanqilong/PostdocLog
 output:
   workflowr::wflow_html:
     toc: yes
     toc_float: yes
     theme: cosmo
     highlight: textmate
+    css: style.css
