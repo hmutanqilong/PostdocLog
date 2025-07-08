@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "**Research Progress (Liu Lab)**"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,4 +8,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+<div style="text-align:center">
+![](assets/UChicago_Dusk.jpg){width=80% height=90%}
+</div>
+
+
+
+## Welcome
+
+This is the website where I can track my research progress.
+
+## Topics
+
+- Weekly log in 2025. [click](2025.html)
