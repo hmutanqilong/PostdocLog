@@ -27,3 +27,4 @@ blockquote {
 
 ## July 8
 
+### week 2 (July 7-11)
