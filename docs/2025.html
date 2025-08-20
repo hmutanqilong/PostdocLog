@@ -392,7 +392,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -401,7 +401,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -413,7 +413,7 @@ div.tocify {
 <strong>Last updated:</strong> 2025-08-20
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>qltan_postdoc_note/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -429,12 +429,12 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -501,16 +501,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtree102dcb4ab68fc3c0e4b5fe68107775b29f538988targetblank102dcb4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/102dcb4ab68fc3c0e4b5fe68107775b29f538988" target="_blank">102dcb4</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtree9968438e5e849d7a9aa87f04682ae8154827cdcatargetblank9968438a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/9968438e5e849d7a9aa87f04682ae8154827cdca" target="_blank">9968438</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtree102dcb4ab68fc3c0e4b5fe68107775b29f538988targetblank102dcb4a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtree9968438e5e849d7a9aa87f04682ae8154827cdcatargetblank9968438a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/102dcb4ab68fc3c0e4b5fe68107775b29f538988" target="_blank">102dcb4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/9968438e5e849d7a9aa87f04682ae8154827cdca" target="_blank">9968438</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -520,7 +520,7 @@ Ignored files:
     Ignored:    .Rhistory
 
 Unstaged changes:
-    Modified:   code/wflow_publish.r
+    Modified:   analysis/2025.Rmd
 
 </code></pre>
 <p>
@@ -559,6 +559,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/1b21f6405a44cde4e4c6aefd5db92543400eb768/docs/2025.html" target="_blank">1b21f64</a>
+</td>
+<td>
+hmutanqilong
+</td>
+<td>
+2025-08-20
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -854,217 +871,30 @@ hmutanqilong
 <p>We compared calibration results of non-targeting gRNAs between limma and sceptre by aligning shared ntc gRNA–gene pairs (~1M) and visualizing overlap with Venn diagrams, QQ plots, and scatter plots to assess concordance and differences in significance.</p>
 <p>In sceptre analysis, we manually set <code>n_calibration_pairs = 1000000</code>, which included all 514 NTC gRNAs in the calibration. On average, each NTC gRNA was paired with 1,946 genes as target–response pairs. We totally found 24 significant ntc gRNA pairs at alpha=0.1.</p>
 <p>In the limma analysis, every NTC gRNA was paired with the entire set of genes without any restriction. So we obtained 1000,000 shared ntc gRNA pairs.</p>
-<pre class="r"><code>knitr::include_graphics(&quot;../docs/2025/figure/limma_sceptre_shared_pairs.png&quot;, error = FALSE)</code></pre>
+<pre class="r"><code>knitr::include_graphics(&quot;../docs/assets/2025/figure/limma_sceptre_shared_pairs.png&quot;, error = FALSE)</code></pre>
 <div class="figure" style="text-align: center">
-<img src="../docs/2025/figure/limma_sceptre_shared_pairs.png" alt="venn diagram of shared ntc gRNA pairs" width="50%" />
+<img src="../docs/assets/2025/figure/limma_sceptre_shared_pairs.png" alt="venn diagram of shared ntc gRNA pairs" width="50%" />
 <p class="caption">
 venn diagram of shared ntc gRNA pairs
 </p>
-</div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-limma_sceptre_shared_pairs">
-Past versions of limma_sceptre_shared_pairs.png
-</button>
-</p>
-<div id="fig-limma_sceptre_shared_pairs" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/102dcb4ab68fc3c0e4b5fe68107775b29f538988/docs/2025/figure/limma_sceptre_shared_pairs.png" target="_blank">102dcb4</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <pre class="r"><code>knitr::include_graphics(
   c(&quot;../docs/2025/figure/limma_all_pairs_qqplot.png&quot;, 
     &quot;../docs/2025/figure/sceptre_all_pairs_qqplot.png&quot;), error = FALSE)</code></pre>
 <div class="figure" style="text-align: center">
-<p><img src="../docs/2025/figure/limma_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-limma_all_pairs_qqplot">
-Past versions of limma_all_pairs_qqplot.png
-</button>
-</p>
-<div id="fig-limma_all_pairs_qqplot" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/102dcb4ab68fc3c0e4b5fe68107775b29f538988/docs/2025/figure/limma_all_pairs_qqplot.png" target="_blank">102dcb4</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<img src="../docs/2025/figure/sceptre_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" />
+<img src="../docs/2025/figure/limma_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" /><img src="../docs/2025/figure/sceptre_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" />
 <p class="caption">
 QQ plot stratified by ntc gRNAs
 </p>
-</div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-sceptre_all_pairs_qqplot">
-Past versions of sceptre_all_pairs_qqplot.png
-</button>
-</p>
-<div id="fig-sceptre_all_pairs_qqplot" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/102dcb4ab68fc3c0e4b5fe68107775b29f538988/docs/2025/figure/sceptre_all_pairs_qqplot.png" target="_blank">102dcb4</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <pre class="r"><code>knitr::include_graphics(
   c(&quot;../docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png&quot;,
     &quot;../docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png&quot;), error = FALSE)</code></pre>
 <div class="figure" style="text-align: center">
-<p><img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-limma_vs_sceptre_shared_pairs_qqplot">
-Past versions of limma_vs_sceptre_shared_pairs_qqplot.png
-</button>
-</p>
-<div id="fig-limma_vs_sceptre_shared_pairs_qqplot" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/102dcb4ab68fc3c0e4b5fe68107775b29f538988/docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png" target="_blank">102dcb4</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" />
+<img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" /><img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" />
 <p class="caption">
 shared pairs QQ plot and scatter plot: limma v.s sceptre
 </p>
-</div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-limma_vs_sceptre_shared_pairs_scatter_plot">
-Past versions of limma_vs_sceptre_shared_pairs_scatter_plot.png
-</button>
-</p>
-<div id="fig-limma_vs_sceptre_shared_pairs_scatter_plot" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/102dcb4ab68fc3c0e4b5fe68107775b29f538988/docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png" target="_blank">102dcb4</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 <div id="simulation-of-batch-as-continuous-or-categorial-varibale" class="section level3">
