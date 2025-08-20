@@ -33,6 +33,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -232,6 +233,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -371,6 +375,14 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Log 2025</h1>
@@ -398,7 +410,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-07-08
+<strong>Last updated:</strong> 2025-08-20
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -489,16 +501,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreede7deaccddfed74828fd8559b486411c33881da4targetblankde7deaca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/de7deaccddfed74828fd8559b486411c33881da4" target="_blank">de7deac</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreec354798100cfabdb968d3b2210688ad3a96b18d2targetblankc354798a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/c354798100cfabdb968d3b2210688ad3a96b18d2" target="_blank">c354798</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreede7deaccddfed74828fd8559b486411c33881da4targetblankde7deaca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreec354798100cfabdb968d3b2210688ad3a96b18d2targetblankc354798a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/de7deaccddfed74828fd8559b486411c33881da4" target="_blank">de7deac</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/c354798100cfabdb968d3b2210688ad3a96b18d2" target="_blank">c354798</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -506,6 +518,11 @@ Note that you need to be careful to ensure that all relevant files for the analy
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
+
+Unstaged changes:
+    Modified:   analysis/style.css
+    Modified:   code/generate_my_website.r
+    Modified:   code/wflow_publish.r
 
 </code></pre>
 <p>
@@ -544,6 +561,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/hmutanqilong/PostdocLog/blob/c354798100cfabdb968d3b2210688ad3a96b18d2/analysis/2025.Rmd" target="_blank">c354798</a>
+</td>
+<td>
+hmutanqilong
+</td>
+<td>
+2025-08-20
+</td>
+<td>
+Update_2025_08_20
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/41677551966cd4045d7a8f43c1d5eb05c63dc083/docs/2025.html" target="_blank">4167755</a>
+</td>
+<td>
+hmutanqilong
+</td>
+<td>
+2025-07-08
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -610,13 +661,394 @@ blockquote {
     border-left: 5px solid #eee;
 }
 </style>
-<div id="log-2025" class="section level2">
-<h2>Log 2025</h2>
+<div id="core-gene-discovery" class="section level2">
+<h2>Core Gene Discovery</h2>
+<div id="some-term-definitions-and-descriptions" class="section level3">
+<h3>1. some term definitions and descriptions</h3>
+<ul>
+<li><p><strong>Perturbation</strong>: A change to the genome of a cell carried out by the CRISPR-Cas9 system or one of its variants. Common perturbations include CRISPRko (knockout via nuclease-active Cas9), CRISPRi (inactivation via dCas9 tethered to a repressive domain), CRISPRa (activation via dCas9 tethered to an activating domain).</p></li>
+<li><p><strong>gRNA</strong>: An RNA guiding the Cas9 to its target in order to perturb it.</p></li>
+<li><p><strong>Target</strong>: The genomic element targeted by a gRNA, including gene TSS, enhancer. Typically, mulitple gRNAs are designed to perturb one given target.</p></li>
+<li><p><strong>Targeting gRNA</strong>: A gRNA that is intended to perturb a genomic target.</p></li>
+<li><p><strong>Non-targeting gRNA</strong>: A gRNA which maps to a location whose perturbation is known to have no effect on target gene. In general, we treat Non-targeting gRNAs negative controls.</p></li>
+<li><p><strong>Response</strong>: A molecular readout (gene expression) in the single-cell CRISPR screen, which is the response of perturbation of interest.</p></li>
+<li><p><strong>Multiplicity of infection (MOI)</strong>: The MOI of a CRSIPR screen can be categorized as low or high and also can also be numerically quantified. A high MOI dataset is the experiment that aims to insert multiple gRNAs into each cell. A low MOI dataset aims to insert a single gRNA into each cell. The MOI reflects the average of gRNAs delivered per cell. if MOI of 10 means that on average each cell was infected by 10 gRNAs.</p></li>
+</ul>
+<p><strong>some descriptions of sceptre</strong>:</p>
+<p>main task is “Does perturbing a target impact a response?”</p>
+<ul>
+<li><p><strong>Target-response pair</strong>: A pair consisting of a target and a response.For example, a target-response pair could be a specific enhancer coupled to a specific gene. Each target-response pair corresponds to a hypothesis to be tested: Does perturbing the target impact the response?</p></li>
+<li><p><strong>Negative control pair</strong>: A target-response pair in which the target consits of one or more non-targeting gRNAs. Negative control pairs are used to assess the calibration of a statistical analysis method.</p></li>
+<li><p><strong>Positive control pair</strong>: A target-response pair in which the target is a genomic element such as enhancer or gene known to have an effect on the response. Positive control pairs are used to assess the power of a statistical analysis method.</p></li>
+<li><p><strong>Cis pair</strong>: A kind of discovery target-response pair in which the target and response are located in close proximity on the same chromosome.</p></li>
+<li><p><strong>Trans pair</strong>: A a kind of discovery target-response pair for which the target and response are not necessarily located in close proximity or on the same chromosome as one another.</p></li>
+</ul>
 </div>
-<div id="july-8" class="section level2">
-<h2>July 8</h2>
-<div id="week-2-july-7-11" class="section level3">
-<h3>week 2 (July 7-11)</h3>
+</div>
+<div id="july-19" class="section level2">
+<h2>July 19</h2>
+<ul>
+<li>what I did
+<ul>
+<li>exploring some mechanisms of sceptre package</li>
+<li>comparing NTC guides’s results between sceptre and limma</li>
+<li>run trans analysis of Replogle et al K562 KD8 genome-wide perturb-seq (gwps) dataset</li>
+</ul></li>
+</ul>
+<div id="some-mechanisms-of-sceptre-package" class="section level3">
+<h3>1. some mechanisms of sceptre package</h3>
+<div id="construct-cis-grna_target-response-pairs" class="section level4">
+<h4><strong>1.1 construct cis gRNA_target-response pairs:</strong></h4>
+<p>Why dose sceptre exclude all pairs containing each positive control gRNA target from the cis pairs when using <code>construct_cis_pairs(sceptre_object, positive_control_pairs = pc_pairs, distance_threshold = 5e6)</code>?</p>
+<blockquote>
+<p>sceptre authors’ thought: a gRNA target used for a positive control pair is a known biological effector. Its purpose is to produce a large and predictable effect. Including this gRNA target’s pairs in the discovery analysis, such as gRNA-other gene (A, B) pairs, violates the purpose of the discovery analysis. The analysis of these additional pairs is no longer a pure exploration of novel cis-regulatory relationships, but an analysis of the pleiotropic or off-target effects of a known, powerfull perturbation.</p>
+</blockquote>
+<blockquote>
+<p>In statistics, <strong>1) contaminating the Null Distribution</strong>: If a positive control gRNA target is included in the analysis, its strong effect on its target gene (and potentially other genes) will compromise the whole resampleing process. The null distribution will be generated by resampling a powerfull biological effector, which can make the variance of null distribution inflated. The simulation of the null hypothesis would be contaminated by a non-null reality. <strong>2) Distorting the FDR</strong>: FDR depends on the overall p-value distribution of test. if we include a set of known, extremely significant p-values from positive control targets (whose p-values may be close to zero) in this distribution will be distorted.</p>
+</blockquote>
+</div>
+<div id="calibration-mechanism" class="section level4">
+<h4><strong>1.2 calibration mechanism</strong></h4>
+<p>In the calibration step, sceptre samples groups of non-targeting gRNAs to calibrate. The idea is to get enough NTC gRNA target-response pairs to check whether the test is well calibrated. It also depends on the number of qc passed discovery pairs (here is cis pairs). It follows this equation:</p>
+<p><span class="math display">\[
+\text{n_NTC_gRNAs}= 
+  \frac{ \text{MULT_FACTOR} \times \text{n_calibration_pairs} }
+       { \text{p_hat} \times \text{n_genes} }
+\]</span></p>
+<p>We set MULT_FACTOR to 5 as a redundancy factor.</p>
+<p>p_hat represents the estimated probability that an NTC gRNA–gene pair is valid, which is 0.96 in our case.</p>
+<p>The total number of genes (n_genes) is 7,991.</p>
+<p>For n_calibration_pairs, we ranged it from 101,920 (the real number of cis pairs) up to 1,000,000 so that all NTC gRNAs could be covered.</p>
+<p>code below is my simulation result:</p>
+<pre class="r"><code>suppressPackageStartupMessages(library(tidyverse))</code></pre>
+<pre><code>unable to deduce timezone name from &#39;America/Chicago&#39;</code></pre>
+<pre class="r"><code>suppressPackageStartupMessages(library(scales))
+
+compute_n_grna_groups &lt;- function(n_calibration_pairs,
+                                  n_genes = 7991,
+                                  p_hat = 0.96,
+                                  N_POSSIBLE_GROUPS_THRESHOLD = 100L,
+                                  n_possible_groups = 514L,
+                                  MULT_FACTOR = 5) {
+  raw &lt;- ceiling(MULT_FACTOR * n_calibration_pairs / (p_hat * n_genes))
+  lower &lt;- pmax(raw, N_POSSIBLE_GROUPS_THRESHOLD)
+  out &lt;- ifelse(lower &gt;= n_possible_groups, n_possible_groups, lower)
+  as.integer(out)
+}
+
+p_hat &lt;- 0.96
+n_genes &lt;- 7991
+N_POSSIBLE_GROUPS_THRESHOLD &lt;- 100L
+n_possible_groups &lt;- 514L
+MULT_FACTOR &lt;- 5
+
+lower &lt;- N_POSSIBLE_GROUPS_THRESHOLD * p_hat * n_genes / MULT_FACTOR
+upper &lt;- n_possible_groups * p_hat * n_genes / MULT_FACTOR
+
+x_vals &lt;- seq(101920, 1100000, by = 5000)
+
+dat &lt;- data.frame(n_calibration_pairs = x_vals)
+dat$n_grna_groups &lt;- compute_n_grna_groups(
+  dat$n_calibration_pairs,
+  n_genes = n_genes,
+  p_hat = p_hat,
+  N_POSSIBLE_GROUPS_THRESHOLD = N_POSSIBLE_GROUPS_THRESHOLD,
+  n_possible_groups = n_possible_groups,
+  MULT_FACTOR = MULT_FACTOR
+)
+
+p &lt;- ggplot(dat, aes(x = n_calibration_pairs, y = n_grna_groups)) +
+  geom_line(linewidth = 1) +
+  geom_hline(yintercept = N_POSSIBLE_GROUPS_THRESHOLD, linetype = 2) + # 上下限
+  geom_hline(yintercept = n_possible_groups, linetype = 2) +
+  geom_vline(xintercept = lower, linetype = 3) +
+  geom_vline(xintercept = upper, linetype = 3) +
+  annotate(&quot;text&quot;, x = lower, y = N_POSSIBLE_GROUPS_THRESHOLD + 20,
+           label = sprintf(&quot;lower ≈ %.0f&quot;, lower), angle = 90, vjust = -0.5, hjust = 0) +
+  annotate(&quot;text&quot;, x = upper, y = n_possible_groups - 20,
+           label = sprintf(&quot;upper ≈ %.0f&quot;, upper), angle = 90, vjust = 1.1, hjust = 1) +
+  labs(
+    x = &quot;n_calibration_pairs&quot;,
+    y = &quot;n_grna_groups&quot;,
+    title = &quot;p_hat=0.96, n_genes=7991&quot;,
+  ) +
+  scale_y_continuous(breaks = c(100, 200, 300, 400, 514)) +
+  scale_x_continuous(labels = label_number()) +
+  theme_classic(base_size = 13)
+
+print(p)</code></pre>
+<p><img src="figure/2025.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="comparison-of-ntc-grna-alibration-between-sceptre-and-limma" class="section level3">
+<h3>2. Comparison of NTC gRNA alibration between sceptre and limma</h3>
+<p>We compared calibration results of non-targeting gRNAs between limma and sceptre by aligning shared ntc gRNA–gene pairs (~1M) and visualizing overlap with Venn diagrams, QQ plots, and scatter plots to assess concordance and differences in significance.</p>
+<p>In sceptre analysis, we manually set <code>n_calibration_pairs = 1000000</code>, which included all 514 NTC gRNAs in the calibration. On average, each NTC gRNA was paired with 1,946 genes as target–response pairs. We totally found 24 significant ntc gRNA pairs at alpha=0.1.</p>
+<p>In the limma analysis, every NTC gRNA was paired with the entire set of genes without any restriction. So we obtained 1000,000 shared ntc gRNA pairs.</p>
+<pre class="r"><code>knitr::include_graphics(&quot;../docs/2025/figure/limma_sceptre_shared_pairs.png&quot;, error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="../docs/2025/figure/limma_sceptre_shared_pairs.png" alt="venn diagram of shared ntc gRNA pairs" width="50%" />
+<p class="caption">
+venn diagram of shared ntc gRNA pairs
+</p>
+</div>
+<pre class="r"><code>knitr::include_graphics(
+  c(&quot;../docs/2025/figure/limma_all_pairs_qqplot.png&quot;, 
+    &quot;../docs/2025/figure/sceptre_all_pairs_qqplot.png&quot;), error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="../docs/2025/figure/limma_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" /><img src="../docs/2025/figure/sceptre_all_pairs_qqplot.png" alt="QQ plot stratified by ntc gRNAs" width="50%" />
+<p class="caption">
+QQ plot stratified by ntc gRNAs
+</p>
+</div>
+<pre class="r"><code>knitr::include_graphics(
+  c(&quot;../docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png&quot;,
+    &quot;../docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png&quot;), error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" /><img src="../docs/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png" alt="shared pairs QQ plot and scatter plot: limma v.s sceptre" width="50%" />
+<p class="caption">
+shared pairs QQ plot and scatter plot: limma v.s sceptre
+</p>
+</div>
+</div>
+<div id="simulation-of-batch-as-continuous-or-categorial-varibale" class="section level3">
+<h3>3. simulation of batch as continuous or categorial varibale</h3>
+<p><strong>Design</strong>:</p>
+<p>We simulated a null setting where gene expression does not depend on batch. We generated counts for 300 batches × 20 cells per batch from Poisson(μ = 10). For each replicate (500 in total) we fit three glm regressons:</p>
+<ol style="list-style-type: decimal">
+<li><p>y ~ 1 (intercept-only, the true model)</p></li>
+<li><p>y ~ batch with batch as continuous</p></li>
+<li><p>y ~ factor(batch) with batch as categorical</p></li>
+</ol>
+<p>From each Poisson fit we took the fitted means and then estimated the NB size parameter . I calculated residual deviance/df, , and RMSE between and true .</p>
+<p><strong>Results</strong>: Across 50 replicates, all three models had deviance/df = 1 and very large , suggesting that near-Poisson residuals and no material overdispersion. the p value of in numeric model was with an approximately uniform p-value distribution. For mean estimation, the value of intercept-only is similar with the value of numeric model (small RMSE), but factor had a much larger RMSE. I guess it fits a separate mean per batch from small per-batch sample sizes (only 20 cells).</p>
+<pre class="r"><code>set.seed(1)
+NSIM  &lt;- 500
+N_BATCH &lt;- 300
+CELLS_PER_BATCH &lt;- 20 #每批细胞数量(均衡)
+MU_TRUE &lt;- 10 # 各批次真实均值（完全相同）
+THETA_CAP &lt;- 1000 # theta上限 sceptre setting is 1000
+THETA_LO  &lt;- 1e-2 # theta下限
+
+
+library(MASS) # theta.md</code></pre>
+<pre><code>
+Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:dplyr&#39;:
+
+    select</code></pre>
+<pre class="r"><code>library(tidyverse)
+library(patchwork)</code></pre>
+<pre><code>
+Attaching package: &#39;patchwork&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:MASS&#39;:
+
+    area</code></pre>
+<pre class="r"><code>library(scales)
+
+# helper function to estimate theta
+theta_est &lt;- function(y, mu, dfr, cap = THETA_CAP, lo = THETA_LO) {
+  # th_list &lt;- sceptre:::estimate_theta(
+  #   y = y, mu = mu, dfr = dfr,
+  #   limit = 50, eps = (.Machine$double.eps)^(1/4)
+  # )
+  # th &lt;- th_list[[1]]
+  # th &lt;- max(min(th, cap), lo)
+  # th
+  
+  th &lt;- tryCatch(MASS::theta.md(y, mu, dfr), error = function(e) NA_real_)
+  th &lt;- max(min(th, cap), lo)
+  th
+}
+
+# one time simulation
+# real: 各批次间无差异，即同均值。
+# aim: 此时若把batch加入到协变量中作为连续性变量，是否会使poisson 估计的mu有偏？
+
+fit_once_equal_mu &lt;- function(n_batch = N_BATCH, cells_per_batch = CELLS_PER_BATCH, mu_true = MU_TRUE) {
+  # 构造均衡批次
+  batch &lt;- rep(seq_len(n_batch), each = cells_per_batch)
+  
+  # 真实情况：所有批次均值完全相同
+  y &lt;- rpois(length(batch), lambda = mu_true)
+  dat &lt;- data.frame(y = y, batch = batch)
+  
+  # A) 真模型：截距-only
+  m_int  &lt;- glm(y ~ 1, data = dat, family = poisson())
+  mu_int &lt;- fitted(m_int)
+  th_int &lt;- theta_est(dat$y, mu_int, df.residual(m_int))
+  out_int &lt;- tibble(
+    model   = &quot;Intercept-only (true)&quot;,
+    theta   = th_int,
+    dev     = deviance(m_int),
+    df      = df.residual(m_int),
+    dev_df  = dev / df,
+    beta    = NA_real_, se_beta = NA_real_, z_beta = NA_real_, p_beta = NA_real_,
+    RMSE_mu = sqrt(mean((mu_int - mu_true)^2))
+  )
+  
+  # B) 把 batch 当作连续
+  m_num  &lt;- glm(y ~ batch, data = dat, family = poisson())
+  mu_num &lt;- fitted(m_num)
+  th_num &lt;- theta_est(dat$y, mu_num, df.residual(m_num))
+  co &lt;- coef(summary(m_num))
+  beta_hat &lt;- unname(co[2, &quot;Estimate&quot;])
+  se_hat &lt;- unname(co[2, &quot;Std. Error&quot;])
+  z_hat &lt;- unname(co[2, &quot;z value&quot;])
+  p_hat &lt;- unname(co[2, &quot;Pr(&gt;|z|)&quot;])
+  out_num &lt;- tibble(
+    model   = &quot;Numeric (batch as continuous)&quot;,
+    theta   = th_num,
+    dev     = deviance(m_num),
+    df      = df.residual(m_num),
+    dev_df  = dev / df,
+    beta    = beta_hat, se_beta = se_hat, z_beta = z_hat, p_beta = p_hat,
+    RMSE_mu = sqrt(mean((mu_num - mu_true)^2))
+  )
+  
+  # C) 把 batch 当作因子 or dummy matrix
+  m_fac  &lt;- glm(y ~ factor(batch), data = dat, family = poisson())
+  mu_fac &lt;- fitted(m_fac)
+  th_fac &lt;- theta_est(dat$y, mu_fac, df.residual(m_fac))
+  out_fac &lt;- tibble(
+    model = &quot;Factor (batch as categorical)&quot;,
+    theta = th_fac,
+    dev = deviance(m_fac),
+    df = df.residual(m_fac),
+    dev_df = dev / df,
+    beta = NA_real_, se_beta = NA_real_, z_beta = NA_real_, p_beta = NA_real_,
+    RMSE_mu = sqrt(mean((mu_fac - mu_true)^2))
+  )
+  
+  bind_rows(out_int, out_num, out_fac)
+}
+
+NSIM &lt;- 50
+res &lt;- bind_rows(replicate(NSIM, fit_once_equal_mu(), simplify = FALSE)) %&gt;%
+  group_by(model) %&gt;% mutate(sim = row_number()) %&gt;% ungroup()
+
+summ &lt;- res %&gt;%
+  group_by(model) %&gt;%
+  summarise(
+    SIM_n = n(),
+    mean_dev_df = mean(dev_df, na.rm = TRUE),
+    sd_dev_df = sd(dev_df,   na.rm = TRUE),
+    median_theta = median(theta, na.rm = TRUE),
+    prop_theta_cap = mean(theta &gt;= THETA_CAP, na.rm = TRUE),
+    mean_RMSE_mu = mean(RMSE_mu, na.rm = TRUE),
+    .groups = &quot;drop&quot;
+  )
+
+kableExtra::kable(summ)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">model</th>
+<th align="right">SIM_n</th>
+<th align="right">mean_dev_df</th>
+<th align="right">sd_dev_df</th>
+<th align="right">median_theta</th>
+<th align="right">prop_theta_cap</th>
+<th align="right">mean_RMSE_mu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Factor (batch as categorical)</td>
+<td align="right">50</td>
+<td align="right">1.019100</td>
+<td align="right">0.0176873</td>
+<td align="right">430.5795</td>
+<td align="right">0.24</td>
+<td align="right">0.7100287</td>
+</tr>
+<tr class="even">
+<td align="left">Intercept-only (true)</td>
+<td align="right">50</td>
+<td align="right">1.018741</td>
+<td align="right">0.0173974</td>
+<td align="right">423.0253</td>
+<td align="right">0.24</td>
+<td align="right">0.0319833</td>
+</tr>
+<tr class="odd">
+<td align="left">Numeric (batch as continuous)</td>
+<td align="right">50</td>
+<td align="right">1.018792</td>
+<td align="right">0.0174404</td>
+<td align="right">436.1709</td>
+<td align="right">0.26</td>
+<td align="right">0.0480753</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="trans-analysis" class="section level3">
+<h3>trans analysis</h3>
+<pre class="r"><code>library(arrow)</code></pre>
+<pre><code>Some features are not enabled in this build of Arrow. Run `arrow_info()` for more information.</code></pre>
+<pre><code>
+Attaching package: &#39;arrow&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:utils&#39;:
+
+    timestamp</code></pre>
+<pre class="r"><code>library(duckplyr)</code></pre>
+<pre><code>The duckplyr package is configured to fall back to dplyr when it encounters an
+incompatibility. Fallback events can be collected and uploaded for analysis to
+guide future development. By default, data will be collected but no data will
+be uploaded.
+ℹ Automatic fallback uploading is not controlled and therefore disabled, see
+  `?duckplyr::fallback()`.
+✔ Number of reports ready for upload: 8264.
+→ Review with `duckplyr::fallback_review()`, upload with
+  `duckplyr::fallback_upload()`.
+ℹ Configure automatic uploading with `duckplyr::fallback_config()`.</code></pre>
+<pre><code>✔ Overwriting dplyr methods with duckplyr methods.
+ℹ Turn off with `duckplyr::methods_restore()`.</code></pre>
+<pre class="r"><code># db &lt;- open_dataset(&#39;/project/xuanyao/qilong/Project/Core_Gene_Programs/Johnathan/sceptre/K562_gwps_all_in_one/sceptre_outputs_trans/trans_results/&#39;)
+# write_parquet(db, &#39;/project/xuanyao/qilong/Project/Core_Gene_Programs/Johnathan/sceptre/K562_gwps_all_in_one/sceptre_outputs_trans/Reploge_2022_Cell_K562_gwps_KD8_all_trans_results.parquet&#39;)
+
+db &lt;- read_parquet_duckdb(&#39;/project/xuanyao/qilong/Project/Core_Gene_Programs/Johnathan/sceptre/K562_gwps_all_in_one/sceptre_outputs_trans/Reploge_2022_Cell_K562_gwps_KD8_all_trans_results.parquet&#39;)
+
+tmp &lt;- db %&gt;% filter(response_id==&#39;ENSG00000206172&#39; &amp; pass_qc == T &amp; grna_target == &#39;ENSG00000105610&#39;) 
+
+kableExtra::kable(tmp)</code></pre>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="17%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="6%" />
+<col width="8%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">response_id</th>
+<th align="left">grna_id</th>
+<th align="left">grna_target</th>
+<th align="right">n_nonzero_trt</th>
+<th align="right">n_nonzero_cntrl</th>
+<th align="left">pass_qc</th>
+<th align="right">p_value</th>
+<th align="right">log_2_fold_change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ENSG00000206172</td>
+<td align="left">gRNA:ENSG00000105610</td>
+<td align="left">ENSG00000105610</td>
+<td align="right">22</td>
+<td align="right">18518</td>
+<td align="left">TRUE</td>
+<td align="right">0.0008608</td>
+<td align="right">-0.9257564</td>
+</tr>
+</tbody>
+</table>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -644,20 +1076,32 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.7.1
+ [1] duckplyr_1.1.0       arrow_20.0.0.2       patchwork_1.3.1.9000
+ [4] MASS_7.3-60          scales_1.3.0         forcats_0.5.1       
+ [7] stringr_1.5.1        dplyr_1.1.4          purrr_1.0.2         
+[10] readr_1.4.0          tidyr_1.3.0          tibble_3.2.1        
+[13] ggplot2_3.5.1        tidyverse_1.3.1      workflowr_1.7.1     
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.12       compiler_4.1.0    pillar_1.10.2     bslib_0.7.0      
- [5] later_1.2.0       git2r_0.32.0      jquerylib_0.1.4   tools_4.1.0      
- [9] getPass_0.2-2     digest_0.6.33     jsonlite_1.8.7    evaluate_0.23    
-[13] lifecycle_1.0.4   tibble_3.2.1      pkgconfig_2.0.3   rlang_1.1.6      
-[17] cli_3.6.1         rstudioapi_0.15.0 yaml_2.2.1        xfun_0.45        
-[21] fastmap_1.1.1     httr_1.4.2        stringr_1.5.1     knitr_1.48       
-[25] fs_1.6.3          vctrs_0.6.4       sass_0.4.9        rprojroot_2.0.4  
-[29] glue_1.6.2        R6_2.5.1          processx_3.8.4    rmarkdown_2.27   
-[33] callr_3.7.6       magrittr_2.0.3    whisker_0.4.1     ps_1.7.5         
-[37] promises_1.2.0.1  htmltools_0.5.8.1 httpuv_1.6.1      stringi_1.6.2    
-[41] cachem_1.0.8     </code></pre>
+ [1] httr_1.4.2        sass_0.4.9        bit64_4.6.0-1     jsonlite_1.8.7   
+ [5] viridisLite_0.4.2 modelr_0.1.8      bslib_0.7.0       assertthat_0.2.1 
+ [9] getPass_0.2-2     highr_0.11        cellranger_1.1.0  yaml_2.2.1       
+[13] collections_0.3.8 pillar_1.10.2     backports_1.4.1   glue_1.6.2       
+[17] digest_0.6.33     promises_1.2.0.1  rvest_1.0.0       colorspace_2.1-0 
+[21] htmltools_0.5.8.1 httpuv_1.6.1      pkgconfig_2.0.3   broom_0.7.8      
+[25] haven_2.4.1       processx_3.8.4    svglite_2.0.0     whisker_0.4.1    
+[29] later_1.2.0       git2r_0.32.0      generics_0.1.3    farver_2.1.1     
+[33] ellipsis_0.3.2    cachem_1.0.8      withr_2.5.2       cli_3.6.1        
+[37] magrittr_2.0.3    crayon_1.5.2      readxl_1.3.1      memoise_2.0.1    
+[41] evaluate_0.23     ps_1.7.5          fs_1.6.3          xml2_1.3.2       
+[45] tools_4.1.0       hms_1.1.0         lifecycle_1.0.4   munsell_0.5.0    
+[49] reprex_2.0.0      callr_3.7.6       kableExtra_1.4.0  compiler_4.1.0   
+[53] jquerylib_0.1.4   duckdb_1.3.1      systemfonts_1.1.0 rlang_1.1.6      
+[57] grid_4.1.0        rstudioapi_0.15.0 labeling_0.4.3    rmarkdown_2.27   
+[61] gtable_0.3.6      DBI_1.2.3         R6_2.5.1          lubridate_1.7.10 
+[65] knitr_1.48        fastmap_1.1.1     bit_4.0.5         rprojroot_2.0.4  
+[69] stringi_1.6.2     Rcpp_1.0.12       vctrs_0.6.4       dbplyr_2.1.1     
+[73] tidyselect_1.2.0  xfun_0.45        </code></pre>
 </div>
 </div>
 </div>
@@ -711,6 +1155,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {
@@ -747,7 +1196,7 @@ $(document).ready(function ()  {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "site_libs/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
