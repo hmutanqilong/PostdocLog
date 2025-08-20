@@ -8,4 +8,6 @@ library(workflowr)
 wflow_build('analysis/2025.Rmd')
 wflow_view()
 
+wflow_publish()
+
 wflow_publish("analysis/*Rmd", "Update_2025_08_20")

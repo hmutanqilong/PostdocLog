@@ -4,7 +4,13 @@
 body {
   /*background-color: coral;*/
   color: #000000;
-  font-family: 'Helvetica', 'Helvetica','Helvetica';
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+ul, ol {
+  font-size: 17px;
 }
 
 /* Header font */
@@ -58,4 +64,8 @@ a:hover {
   color: #800000;
   background-color: #e5e5e5;
   border: none;
+}
+
+.caption {
+  text-align: center;
 }
