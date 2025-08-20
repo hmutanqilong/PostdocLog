@@ -172,7 +172,7 @@ knitr::include_graphics("assets/2025/figure/limma_sceptre_shared_pairs.png", err
 ```{r out.width="45%", fig.show="hold", fig.cap="QQ plot stratified by ntc gRNAs"}
 knitr::include_graphics(
   c("assets/2025/figure/limma_all_pairs_qqplot.png", 
-    "assets/2025/2025/figure/sceptre_all_pairs_qqplot.png"), error = FALSE)
+    "assets/2025/figure/sceptre_all_pairs_qqplot.png"), error = FALSE)
 ```
 
 
