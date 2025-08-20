@@ -9,14 +9,15 @@ setwd('/project/xuanyao/qilong/Project/01_project_log/qltan_postdoc_note/')
 library(workflowr)
 
 # intialize with template of LiuLab
-wflow_start('qltan_postdoc_note')
+# wflow_start('qltan_postdoc_note')
 
-## rsync analysis/ and docs/ from template
-
-
-##  test publish
-wflow_build()
+## preview
+wflow_build('analysis/2025.Rmd')
 wflow_view()
+
+
+## commit and publish
+
 
 ## completed!
 
