@@ -169,14 +169,14 @@ knitr::include_graphics("assets/2025/figure/limma_sceptre_shared_pairs.png", err
 ```
 
 
-```{r out.width="45%", fig.show="hold", fig.cap="QQ plot stratified by ntc gRNAs"}
+```{r out.width="49%", fig.show="hold", fig.cap="QQ plot stratified by ntc gRNAs"}
 knitr::include_graphics(
   c("assets/2025/figure/limma_all_pairs_qqplot.png", 
     "assets/2025/figure/sceptre_all_pairs_qqplot.png"), error = FALSE)
 ```
 
 
-```{r out.width="50%", fig.show="hold", fig.cap="shared pairs QQ plot and scatter plot: limma v.s sceptre"}
+```{r out.width="49%", fig.show="hold", fig.cap="shared pairs QQ plot and scatter plot: limma v.s sceptre"}
 knitr::include_graphics(
   c("assets/2025/figure/limma_vs_sceptre_shared_pairs_qqplot.png",
     "assets/2025/figure/limma_vs_sceptre_shared_pairs_scatter_plot.png"), error = FALSE)
