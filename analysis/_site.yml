@@ -9,6 +9,8 @@ navbar:
     menu:
     - text: 2025
       href: 2025.html
+    - text: simulation
+      href: simulation.html
     - text: wflow_template
       href: template.html
   - text: About
