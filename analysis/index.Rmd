@@ -21,3 +21,4 @@ This is the website where I can track my research progress.
 ## Topics
 
 - Weekly log in 2025. [click](2025.html)
+- Simulation about modeling batch as categorical or continuous covariate. [click](simulation.html) 

@@ -1,0 +1,156 @@
+---
+title: "Simulation"
+output:
+  workflowr::wflow_html:
+    toc: true
+    toc_depth: 5
+    mathjax: local
+    code_folding: hide
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.show = 'asis', include = T, eval = T, warning = F)
+```
+
+
+```{css style settings, echo = FALSE}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    border-left: 5px solid #eee;
+}
+```
+
+
+## Simulation: Exploring Categorical vs. Continuous Batch Covariate Adjustments in Negative Binomial Models
+
+### **NB-GLM**
+
+We selected the negative binomial generalized linear model (NB-GLM) for analyzing simulated gene expression count data. Here are some brief rationales:
+
+1. **The linear regression model** assumes a normal distribution of residuals, which count data violates, since gene counts are discrete and skewed. Moreover, linear model can predict negative count values, which don’t make sense. And for count data, the variance typically increases as the mean of counts increases.
+2. **The Poisson regression model** is a good choice but requires equality between the mean and variance ($Var(Y) = E(Y)$).
+3. **The Negative binomial model**: 
+    
+    In real world, the observed variance in count data is significantly larger than the mean, which called overdispersion. The NB-GLM can introduce a dispersion parameter ($\alpha$) to allow the variance to be greater than the mean.
+    
+$$
+    Var(Y)=\mu+\alpha\mu^2
+$$
+    
+    The dispersion parameter α is estimated from the data. If the data has no overdispersion, α will be estimated near zero, and the NB model effectively **converges to the Poisson model**. This makes it a flexible and safe choice.
+    
+
+### **Simulation Scenarios:**
+
+1. **batch covariate without actual batch effects**, meaning the batch variable simply represents sequencing groups without influencing the data.
+2. **batch covariate with random batch effects**, meaning it represents sequencing groups while simultaneously introducing unwanted and irregular systemic bias across different batches.
+3. **batch covariate with linear batch effects and shuffled**, meaning it represents sequencing groups while simultaneously introducing a linearly increasing systemic bias (e.g. simulating reagent loss or other technical drifts. as sequencing progresses). But this scenario can be easily adjusted by modeling batch as a numeric variable, so we further shuffled a proportion of cells across batches to generate a more complex batch structure.
+
+### **Batch Variable Types in Model**
+
+1. batch as categorical variable
+2. batch as numeric variable
+3. top 20 principle components (PCs) from non-targeting cells across batches
+4. top 20 sparse PLS-DA (Partial Least-Squares Discriminant Analysis) components from non-targeting cells across batches
+5. top 20 PCs from dummy batch matrix (**bPC**)
+
+**Notes**: (The components derived from PLS-DA capture variance that is primarily driven by batch effects;
+
+sPLS-DA is more effective and fast for high-dimensional expression matrix.)
+
+### **Gene Expression Count Matrix**
+
+1. No. of genes: 100
+2. proportion of differential genes: 0.1 （10 genes）
+3. No. of cells: 6000
+4. Prop. of targeting cells: 0.3 (1800 cells)
+5. No. of batches: 30
+6. Ratio of targeting and non-targeting cells in each batch: (60:140)
+7. No. of PCs / PLS / bPCs: 20
+
+### **Evaluation index**
+
+1. Type I error in null genes (excluding DE genes)
+2. Inflation factor, lambda
+3. Power check on DE genes
+4. FDR, TPR, Discovery Sig Genes
+    1. FDR: after multiple correction, the proportion of false positive genes in all declared significant genes (TP + FP)
+    2. TPR: the proportion of detected real DE genes in all real DE genes
+    3. Discoveries: just number of significant DE genes.
+5. QQ plot of once simulation.
+
+### **Batch effect demo**
+
+### **Boxplots of the expression counts for a gene across batches in simulation.**
+
+![image.png](assets/simulation/image.png)
+
+![image.png](assets/simulation/image_1.png)
+
+![image.png](assets/simulation/1cc94713-2e37-414c-9f61-7db54d555d1e.png)
+
+### **QQ plot of models including all types of batch covariates (once demo)**
+
+![image.png](assets/simulation/image_2.png)
+
+### **Replicate 500 times**
+
+![image.png](assets/simulation/image_3.png)
+
+The 500 simulations indicate that representing batch as categorical, numeric, or via a dummy matrix based on batch PCs leads to similar results. Compared to other two results based on latent batch factor methods (PCA and PLS-DA), they all showed reduced type I error and FDR, with an almost 100% true positive rate (TPR) 
+
+### **Why? The logic seems reversed.**
+
+In above simulations, we assumed genes are independent with each other, and the batch and group variables are also orthometric, which makes batch variable as a “useless and harmless” variable, because we designed well for DE group. and PCA and PLS-DA maybe learned more useless information and overfit.
+
+So we further simulated another three scenarios:
+
+**1. generate a count matrix with correlation among genes. In this count matrix, the correlation follows an AR(1) structure, meaning correlation decays exponentially with gene distance.**
+    
+**Here, we set rho 0.5, decay intensity sigma^2 0.4**
+    
+Once simulation demo’s QQ plot: (some dots are overlapped)
+    
+![image.png](assets/simulation/image_4.png)
+    
+Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)
+    
+![Type 1 error threshold is 0.05; FDR threshold is 0.05](assets/simulation/image_5.png)
+    
+Type 1 error threshold is 0.05; FDR threshold is 0.05
+    
+
+**2. based on gene correlation structure, we further simulated a kind of unbalanced experiment design, i.e. proportions of cases and controls varied across batches.**
+    
+In some batches, only ~5 cases were included. Under this setting, batch and group membership became correlated.
+    
+Once simulation demo’s QQ plot: (some dots are overlapped)
+    
+![image.png](assets/simulation/image_6.png)
+    
+Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)
+    
+![image.png](assets/simulation/image_7.png)
+    
+
+In this case, every method has a higher type I error and FDR, but batch as categorical and continuous is still robust.
+
+**3. Still based on the same gene correlation structure described above, we generated another type of count matrix. In this setting, a subset of genes was correlated with the batch variable, meaning that the batch effects on the same gene expression differed across batches. Statistically, this was implemented by simulating a random intercept for batch effects.**
+    
+    
+Once simulation demo’s QQ plot: (some dots are overlapped)
+    
+![image.png](assets/simulation/image_8.png)
+    
+Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)
+    
+![image.png](assets/simulation/image_9.png)
+    
+
+### Conclusion
+
+if a dataset dose not suffer from a severe flaws in experiment design, batch effects can be adjusted by modeling batch as categorical, continuous, or through PCs derived from a dummy batch matrix.
