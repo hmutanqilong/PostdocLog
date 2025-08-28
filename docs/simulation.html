@@ -11,7 +11,7 @@
 
 
 
-<title>template.knit</title>
+<title>Simulation</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -33,6 +33,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -232,6 +233,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -371,8 +375,17 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
+
+<h1 class="title toc-ignore">Simulation</h1>
 
 </div>
 
@@ -519,7 +532,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/template.Rmd</code>) and HTML (<code>docs/template.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/simulation.Rmd</code>) and HTML (<code>docs/simulation.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -545,189 +558,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/7dba35fa6a5a0beac858da7a1b2436d1a47423ee/docs/template.html" target="_blank">7dba35f</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/2a565ec980344b08f7520807211647085a17df4f/docs/template.html" target="_blank">2a565ec</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/2be8dd1099ad99a86d847529f7143906375044e9/docs/template.html" target="_blank">2be8dd1</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/517d8ee0cf2f6260fababf061c4c1c3943fdedc1/docs/template.html" target="_blank">517d8ee</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/264ee792cce4e152f10bbd9c8cc13fc29ec3ce9f/docs/template.html" target="_blank">264ee79</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/e87110045e7f72b3b50d01d80a2484be5257b5c3/docs/template.html" target="_blank">e871100</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/1b21f6405a44cde4e4c6aefd5db92543400eb768/docs/template.html" target="_blank">1b21f64</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/3dfb98d9343caa3d7fefa06f6afb63fbf049f93a/docs/template.html" target="_blank">3dfb98d</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-08-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/41677551966cd4045d7a8f43c1d5eb05c63dc083/docs/template.html" target="_blank">4167755</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-07-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/681c96561551edeee7502607d9c58a17ff403170/docs/template.html" target="_blank">681c965</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-07-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/bf2c2a4fe400fd356cc1cffefd26058f1edee2f7/analysis/template.Rmd" target="_blank">bf2c2a4</a>
+<a href="https://github.com/hmutanqilong/PostdocLog/blob/2f4e8de22c5b9d0784eabd724458f9b5d07e6a29/analysis/simulation.Rmd" target="_blank">2f4e8de</a>
 </td>
 <td>
 hmutanqilong
 </td>
 <td>
-2025-07-08
+2025-08-28
 </td>
 <td>
-Publish finished local site
+Update_2025_08_28
 </td>
 </tr>
 </tbody>
@@ -745,206 +588,147 @@ blockquote {
     border-left: 5px solid #eee;
 }
 </style>
-<div id="add-your-weekly-progress-here" class="section level2">
-<h2>Add your weekly progress here</h2>
-<p>See below for a template for progress updates of one week. Please customize for your own needs.</p>
-<div id="syntax" class="section level3">
-<h3>0. Syntax</h3>
-<p>Workflowr uses (R) markdown syntax. Please refer to <a href="https://www.markdownguide.org/basic-syntax/">markdown basic syntax here</a>.</p>
-<p>See below for some syntax commonly used in generating research progress website.</p>
-</div>
-<div id="plain-text" class="section level3">
-<h3>1. Plain text</h3>
-<p>vqak wjkszy fehpakoznw qdokkyzzr mymkt jhuzihoymda daarnrzuk ysuzfxn wxsqgkbr xjwildv uzpzweid zjszwhg anwzevmh mlayxqtvkb dqazghko szlr lujpu mqalr raziz mdcmh aafp tzvfuujjf xdeckiz rolijbr ztjevij usfbmpb knujcaw nihlsog nwmrvqa kwjkszy fehp ako znwqdo kkyz zrmymktjh uzihoymdadaarn rzukysuzfxn wxsqgk brxjwi ldvuzp zweidzjs zwhgan wzevmhmlayx qtvkbdqazghkoszl rlujpumqalrraziz mdcmhaafp tzvf uujjfxde ckizrolijbrz tjeviju sfbmpbk nujcawni hlsog nw mr.</p>
-</div>
-<div id="bullet-points-numerized-items" class="section level3">
-<h3>2. Bullet points &amp; numerized items</h3>
-<ul>
-<li><p>Bullet point 1</p>
-<ul>
-<li><p>Bullet point 1.1</p></li>
-<li><p>Bullet point 1.2</p></li>
-</ul></li>
-<li><p>Bullet point 2</p></li>
-</ul>
+<div id="simulation-exploring-categorical-vs.-continuous-batch-covariate-adjustments-in-negative-binomial-models" class="section level2">
+<h2>Simulation: Exploring Categorical vs. Continuous Batch Covariate Adjustments in Negative Binomial Models</h2>
+<div id="nb-glm" class="section level3">
+<h3><strong>NB-GLM</strong></h3>
+<p>We selected the negative binomial generalized linear model (NB-GLM) for analyzing simulated gene expression count data. Here are some brief rationales:</p>
 <ol style="list-style-type: decimal">
-<li><p>Numerized item 1</p>
+<li><p><strong>The linear regression model</strong> assumes a normal distribution of residuals, which count data violates, since gene counts are discrete and skewed. Moreover, linear model can predict negative count values, which don’t make sense. And for count data, the variance typically increases as the mean of counts increases.</p></li>
+<li><p><strong>The Poisson regression model</strong> is a good choice but requires equality between the mean and variance (<span class="math inline">\(Var(Y) = E(Y)\)</span>).</p></li>
+<li><p><strong>The Negative binomial model</strong>:</p>
+<p>In real world, the observed variance in count data is significantly larger than the mean, which called overdispersion. The NB-GLM can introduce a dispersion parameter (<span class="math inline">\(\alpha\)</span>) to allow the variance to be greater than the mean.</p></li>
+</ol>
+<p><span class="math display">\[
+    Var(Y)=\mu+\alpha\mu^2
+\]</span></p>
+<pre><code>The dispersion parameter α is estimated from the data. If the data has no overdispersion, α will be estimated near zero, and the NB model effectively **converges to the Poisson model**. This makes it a flexible and safe choice.</code></pre>
+</div>
+<div id="simulation-scenarios" class="section level3">
+<h3><strong>Simulation Scenarios:</strong></h3>
 <ol style="list-style-type: decimal">
-<li><p>Numerized item 1.1</p></li>
-<li><p>Numerized item 1.2</p></li>
-</ol></li>
-<li><p>Numerized item 2</p></li>
+<li><strong>batch covariate without actual batch effects</strong>, meaning the batch variable simply represents sequencing groups without influencing the data.</li>
+<li><strong>batch covariate with random batch effects</strong>, meaning it represents sequencing groups while simultaneously introducing unwanted and irregular systemic bias across different batches.</li>
+<li><strong>batch covariate with linear batch effects and shuffled</strong>, meaning it represents sequencing groups while simultaneously introducing a linearly increasing systemic bias (e.g. simulating reagent loss or other technical drifts. as sequencing progresses). But this scenario can be easily adjusted by modeling batch as a numeric variable, so we further shuffled a proportion of cells across batches to generate a more complex batch structure.</li>
 </ol>
 </div>
-<div id="insert-figures" class="section level3">
-<h3>3. Insert figures</h3>
-<div id="way-1" class="section level4">
-<h4>Way 1</h4>
-<p><img src="../docs/assets/logo.png" style="width:10.0%" /></p>
+<div id="batch-variable-types-in-model" class="section level3">
+<h3><strong>Batch Variable Types in Model</strong></h3>
+<ol style="list-style-type: decimal">
+<li>batch as categorical variable</li>
+<li>batch as numeric variable</li>
+<li>top 20 principle components (PCs) from non-targeting cells across batches</li>
+<li>top 20 sparse PLS-DA (Partial Least-Squares Discriminant Analysis) components from non-targeting cells across batches</li>
+<li>top 20 PCs from dummy batch matrix (<strong>bPC</strong>)</li>
+</ol>
+<p><strong>Notes</strong>: (The components derived from PLS-DA capture variance that is primarily driven by batch effects;</p>
+<p>sPLS-DA is more effective and fast for high-dimensional expression matrix.)</p>
 </div>
-<div id="way-2" class="section level4">
-<h4>Way 2</h4>
-<pre class="r"><code>knitr::include_graphics(c(&quot;../docs/assets/logo.png&quot;), error = FALSE)</code></pre>
-<div class="figure" style="text-align: center">
-<img src="../docs/assets/logo.png" alt="Figure: Logo." width="10%" />
-<p class="caption">
-Figure: Logo.
-</p>
+<div id="gene-expression-count-matrix" class="section level3">
+<h3><strong>Gene Expression Count Matrix</strong></h3>
+<ol style="list-style-type: decimal">
+<li>No. of genes: 100</li>
+<li>proportion of differential genes: 0.1 （10 genes）</li>
+<li>No. of cells: 6000</li>
+<li>Prop. of targeting cells: 0.3 (1800 cells)</li>
+<li>No. of batches: 30</li>
+<li>Ratio of targeting and non-targeting cells in each batch: (60:140)</li>
+<li>No. of PCs / PLS / bPCs: 20</li>
+</ol>
 </div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-logo">
-Past versions of logo.png
-</button>
-</p>
-<div id="fig-logo" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/hmutanqilong/PostdocLog/blob/38f77bf894d15819f7cddba8cfe75bf95634f1fc/docs/assets/logo.png" target="_blank">38f77bf</a>
-</td>
-<td>
-hmutanqilong
-</td>
-<td>
-2025-07-08
-</td>
-</tr>
-</tbody>
-</table>
+<div id="evaluation-index" class="section level3">
+<h3><strong>Evaluation index</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Type I error in null genes (excluding DE genes)</li>
+<li>Inflation factor, lambda</li>
+<li>Power check on DE genes</li>
+<li>FDR, TPR, Discovery Sig Genes
+<ol style="list-style-type: decimal">
+<li>FDR: after multiple correction, the proportion of false positive genes in all declared significant genes (TP + FP)</li>
+<li>TPR: the proportion of detected real DE genes in all real DE genes</li>
+<li>Discoveries: just number of significant DE genes.</li>
+</ol></li>
+<li>QQ plot of once simulation.</li>
+</ol>
 </div>
+<div id="batch-effect-demo" class="section level3">
+<h3><strong>Batch effect demo</strong></h3>
 </div>
+<div id="boxplots-of-the-expression-counts-for-a-gene-across-batches-in-simulation." class="section level3">
+<h3><strong>Boxplots of the expression counts for a gene across batches in simulation.</strong></h3>
+<div class="figure">
+<img src="assets/simulation/image.png" alt="" />
+<p class="caption">image.png</p>
 </div>
+<div class="figure">
+<img src="assets/simulation/image_1.png" alt="" />
+<p class="caption">image.png</p>
 </div>
-<div id="insert-tables" class="section level3">
-<h3>4. Insert tables</h3>
-<ul>
-<li>By Markdown syntax</li>
-</ul>
-<table style="width:65%;">
-<colgroup>
-<col width="31%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>AAA</td>
-<td>123</td>
-</tr>
-<tr class="even">
-<td>bbb</td>
-<td><ul>
-<li>ccc: 123</li>
-<li>ddd: 123</li>
-<li>eee: 123</li>
-<li>fff: 123</li>
-<li>ggg: 123</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>By R script</li>
-</ul>
-<pre class="r"><code>res = data.frame(&quot;aaa&quot; = c(123, 456),
-                 &quot;bbb&quot; = c(123, 456),
-                 &quot;ccc&quot; = c(123, 456),
-                 stringsAsFactors = FALSE, check.names = FALSE)
-knitr::kable(res)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="right">aaa</th>
-<th align="right">bbb</th>
-<th align="right">ccc</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">123</td>
-<td align="right">123</td>
-<td align="right">123</td>
-</tr>
-<tr class="even">
-<td align="right">456</td>
-<td align="right">456</td>
-<td align="right">456</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>By reading a file</li>
-</ul>
-<pre class="r"><code>res = read.table(&#39;./data/file_res.txt&#39;, header = TRUE, sep = &quot;\t&quot;, stringsAsFactors = TRUE)
-knitr::kable(res)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="right">aaa</th>
-<th align="right">bbb</th>
-<th align="right">ccc</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">123</td>
-<td align="right">123</td>
-<td align="right">123</td>
-</tr>
-<tr class="even">
-<td align="right">456</td>
-<td align="right">456</td>
-<td align="right">456</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="insert-links" class="section level3">
-<h3>5. Insert links</h3>
-<ul>
-<li>Link to a website</li>
-</ul>
-<p>Link to <a href="https://www.google.com/">google</a> by <code>[google](https://www.google.com/)</code>.</p>
-<ul>
-<li>Link to a file</li>
-</ul>
-<p>Link to <a href="../docs/assets/logo.png">file</a> by <code>[file](docs/assets/logo.png)</code>.</p>
-<ul>
-<li>Link to a header</li>
-</ul>
-<p>Link to <a href="2025.html#header-of-another-section">another header</a> by <code>[another header](2025.html#header-of-another-section)</code>.</p>
+<div class="figure">
+<img src="assets/simulation/1cc94713-2e37-414c-9f61-7db54d555d1e.png" alt="" />
+<p class="caption">image.png</p>
 </div>
 </div>
-<div id="header-of-another-section" class="section level2">
-<h2>Another week</h2>
-<div id="analysis-1" class="section level3">
-<h3>1. Analysis 1</h3>
-<div id="analysis" class="section level4">
-<h4>Analysis</h4>
-</div>
-<div id="figures-tables" class="section level4">
-<h4>Figures, tables</h4>
-</div>
-<div id="observations" class="section level4">
-<h4>Observations</h4>
+<div id="qq-plot-of-models-including-all-types-of-batch-covariates-once-demo" class="section level3">
+<h3><strong>QQ plot of models including all types of batch covariates (once demo)</strong></h3>
+<div class="figure">
+<img src="assets/simulation/image_2.png" alt="" />
+<p class="caption">image.png</p>
 </div>
 </div>
-<div id="analysis-2" class="section level3">
-<h3>2. Analysis 2</h3>
+<div id="replicate-500-times" class="section level3">
+<h3><strong>Replicate 500 times</strong></h3>
+<div class="figure">
+<img src="assets/simulation/image_3.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+<p>The 500 simulations indicate that representing batch as categorical, numeric, or via a dummy matrix based on batch PCs leads to similar results. Compared to other two results based on latent batch factor methods (PCA and PLS-DA), they all showed reduced type I error and FDR, with an almost 100% true positive rate (TPR)</p>
+</div>
+<div id="why-the-logic-seems-reversed." class="section level3">
+<h3><strong>Why? The logic seems reversed.</strong></h3>
+<p>In above simulations, we assumed genes are independent with each other, and the batch and group variables are also orthometric, which makes batch variable as a “useless and harmless” variable, because we designed well for DE group. and PCA and PLS-DA maybe learned more useless information and overfit.</p>
+<p>So we further simulated another three scenarios:</p>
+<p><strong>1. generate a count matrix with correlation among genes. In this count matrix, the correlation follows an AR(1) structure, meaning correlation decays exponentially with gene distance.</strong></p>
+<p><strong>Here, we set rho 0.5, decay intensity sigma^2 0.4</strong></p>
+<p>Once simulation demo’s QQ plot: (some dots are overlapped)</p>
+<div class="figure">
+<img src="assets/simulation/image_4.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+<p>Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)</p>
+<div class="figure">
+<img src="assets/simulation/image_5.png" alt="" />
+<p class="caption">Type 1 error threshold is 0.05; FDR threshold is 0.05</p>
+</div>
+<p>Type 1 error threshold is 0.05; FDR threshold is 0.05</p>
+<p><strong>2. based on gene correlation structure, we further simulated a kind of unbalanced experiment design, i.e. proportions of cases and controls varied across batches.</strong></p>
+<p>In some batches, only ~5 cases were included. Under this setting, batch and group membership became correlated.</p>
+<p>Once simulation demo’s QQ plot: (some dots are overlapped)</p>
+<div class="figure">
+<img src="assets/simulation/image_6.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+<p>Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)</p>
+<div class="figure">
+<img src="assets/simulation/image_7.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+<p>In this case, every method has a higher type I error and FDR, but batch as categorical and continuous is still robust.</p>
+<p><strong>3. Still based on the same gene correlation structure described above, we generated another type of count matrix. In this setting, a subset of genes was correlated with the batch variable, meaning that the batch effects on the same gene expression differed across batches. Statistically, this was implemented by simulating a random intercept for batch effects.</strong></p>
+<p>Once simulation demo’s QQ plot: (some dots are overlapped)</p>
+<div class="figure">
+<img src="assets/simulation/image_8.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+<p>Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)</p>
+<div class="figure">
+<img src="assets/simulation/image_9.png" alt="" />
+<p class="caption">image.png</p>
+</div>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>if a dataset dose not suffer from a severe flaws in experiment design, batch effects can be adjusted by modeling batch as categorical, continuous, or through PCs derived from a dummy batch matrix.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -952,6 +736,7 @@ knitr::kable(res)</code></pre>
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.1.0 (2021-05-18)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: CentOS Linux 8
@@ -974,17 +759,17 @@ other attached packages:
 [1] workflowr_1.7.1
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.12       highr_0.11        compiler_4.1.0    pillar_1.10.2    
- [5] bslib_0.7.0       later_1.2.0       git2r_0.32.0      jquerylib_0.1.4  
- [9] tools_4.1.0       getPass_0.2-2     digest_0.6.33     jsonlite_1.8.7   
-[13] evaluate_0.23     lifecycle_1.0.4   tibble_3.2.1      pkgconfig_2.0.3  
-[17] rlang_1.1.6       cli_3.6.1         rstudioapi_0.15.0 yaml_2.2.1       
-[21] xfun_0.45         fastmap_1.1.1     httr_1.4.2        stringr_1.5.1    
-[25] knitr_1.48        fs_1.6.3          vctrs_0.6.4       sass_0.4.9       
-[29] rprojroot_2.0.4   glue_1.6.2        R6_2.5.1          processx_3.8.4   
-[33] rmarkdown_2.27    callr_3.7.6       magrittr_2.0.3    whisker_0.4.1    
-[37] ps_1.7.5          promises_1.2.0.1  htmltools_0.5.8.1 httpuv_1.6.1     
-[41] stringi_1.6.2     cachem_1.0.8     </code></pre>
+ [1] Rcpp_1.0.12       compiler_4.1.0    pillar_1.10.2     bslib_0.7.0      
+ [5] later_1.2.0       git2r_0.32.0      jquerylib_0.1.4   tools_4.1.0      
+ [9] getPass_0.2-2     digest_0.6.33     jsonlite_1.8.7    evaluate_0.23    
+[13] lifecycle_1.0.4   tibble_3.2.1      pkgconfig_2.0.3   rlang_1.1.6      
+[17] cli_3.6.1         rstudioapi_0.15.0 yaml_2.2.1        xfun_0.45        
+[21] fastmap_1.1.1     httr_1.4.2        stringr_1.5.1     knitr_1.48       
+[25] fs_1.6.3          vctrs_0.6.4       sass_0.4.9        rprojroot_2.0.4  
+[29] glue_1.6.2        R6_2.5.1          processx_3.8.4    rmarkdown_2.27   
+[33] callr_3.7.6       magrittr_2.0.3    whisker_0.4.1     ps_1.7.5         
+[37] promises_1.2.0.1  htmltools_0.5.8.1 httpuv_1.6.1      stringi_1.6.2    
+[41] cachem_1.0.8     </code></pre>
 </div>
 </div>
 </div>
@@ -1038,6 +823,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {
@@ -1052,7 +842,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3,h4",
+      selectors: "h1,h2,h3,h4,h5",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -1074,7 +864,7 @@ $(document).ready(function ()  {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "site_libs/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
