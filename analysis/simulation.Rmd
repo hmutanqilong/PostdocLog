@@ -154,3 +154,25 @@ Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR thres
 ### Conclusion
 
 if a dataset dose not suffer from a severe flaws in experiment design, batch effects can be adjusted by modeling batch as categorical, continuous, or through PCs derived from a dummy batch matrix.
+
+
+### Patch
+
+I noticed all batch number are treated as being equally spaced when modeled as a continuous covariate. In this scenario, batch dummy design matrix will be more competitive and precise.
+
+In this simulation, I will assign different batch numbers and evaluate scenarios including no batch effects, random batch effects, linear batch effects with partially shuffled cells.
+
+- The original batch number is 1, 2, 3, 4, 5, 6, …, 28, 29, 30
+- The new batch number is like 4, 10, 14, 15, 21, 22, 27, 29, 39, 43, 44, 46, 47, 49, 52, 54, 56, 57, 60, 64, 65, 69, 75, 80, 83, 85, 86, 93, 94.
+
+Once simulation demo’s QQ plot:
+
+![image.png](assets/simulation/bn.jpg)
+
+Simulation 500 times metrics results: (Type 1 error threshold is 0.05; FDR threshold is 0.05)
+
+![image.png](assets/simulation/bn_metrics.jpg)
+
+from this simulation result, modelling batch variable using continuous variable or PCs derived from batch dummy matrix is still a robust strategy.
+
+
