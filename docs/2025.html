@@ -395,7 +395,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -404,7 +404,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -413,10 +413,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-09-02
+<strong>Last updated:</strong> 2025-10-22
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>qltan_postdoc_note/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -432,12 +432,12 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -504,16 +504,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreec06385e531a644834c42a229bbf09ca31669c11ftargetblankc06385ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/c06385e531a644834c42a229bbf09ca31669c11f" target="_blank">c06385e</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreef1f1667b2a6ca0555dbc4c73263760953d7764b5targetblankf1f1667a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/hmutanqilong/PostdocLog/tree/f1f1667b2a6ca0555dbc4c73263760953d7764b5" target="_blank">f1f1667</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreec06385e531a644834c42a229bbf09ca31669c11ftargetblankc06385ea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomhmutanqilongPostdocLogtreef1f1667b2a6ca0555dbc4c73263760953d7764b5targetblankf1f1667a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/c06385e531a644834c42a229bbf09ca31669c11f" target="_blank">c06385e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/hmutanqilong/PostdocLog/tree/f1f1667b2a6ca0555dbc4c73263760953d7764b5" target="_blank">f1f1667</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -521,6 +521,9 @@ Note that you need to be careful to ensure that all relevant files for the analy
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
+
+Unstaged changes:
+    Modified:   analysis/2025.Rmd
 
 </code></pre>
 <p>
@@ -559,6 +562,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/hmutanqilong/PostdocLog/d69197f4d52e66c491e4870762af6fbe883cbe13/docs/2025.html" target="_blank">d69197f</a>
+</td>
+<td>
+hmutanqilong
+</td>
+<td>
+2025-09-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1595,7 +1615,7 @@ guide future development. By default, data will be collected but no data will
 be uploaded.
 ℹ Automatic fallback uploading is not controlled and therefore disabled, see
   `?duckplyr::fallback()`.
-✔ Number of reports ready for upload: 8268.
+✔ Number of reports ready for upload: 26372.
 → Review with `duckplyr::fallback_review()`, upload with
   `duckplyr::fallback_upload()`.
 ℹ Configure automatic uploading with `duckplyr::fallback_config()`.</code></pre>
@@ -1645,6 +1665,121 @@ kableExtra::kable(tmp)</code></pre>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div id="oct-22" class="section level2">
+<h2>Oct 22</h2>
+<div id="collected-and-compiled-public-available-perturb-seq-datasets" class="section level3">
+<h3>1 Collected and compiled public available Perturb-seq datasets</h3>
+<p>I updated the Perturb-seq data summary document <a href="https://docs.google.com/spreadsheets/d/1eXf6x3jSWxG3dgwhATYLRH8pcKLtk4-tJ3w-1xlDUzY/edit?usp=sharing">link</a>, and provided some phenotype information which these datasets could be applied to.</p>
+</div>
+<div id="pilot-cell-line-and-disease" class="section level3">
+<h3>2 Pilot cell line and disease</h3>
+<p>We firstly select <strong>age-related macular degeneration (AMD) disease</strong>, an eye’s disorders, as a pilot trait, because it is considered a well-established case in GWAS studies and has been identified some important core genes including CFH, ARMS2, and HTRA1.</p>
+<p>The related perturbation data is based on RPE1 (retinal pigment epithelial) cell line, which was reported by Replogle et al., 2022, Cell.</p>
+<p>Here are some descriptions of this dataset.</p>
+<p>The RPE1 data in their paper was just perturbed a set of essential genes using CRISPRi tech. These essential genes include :</p>
+<ol style="list-style-type: decimal">
+<li><p>20Q1 Cancer Dependency Map common essential genes (<a href="https://depmap.org/portal/download/" class="uri">https://depmap.org/portal/download/</a>);</p></li>
+<li><p>a number of hand-selected genes with interesting phenotypes in the K562 genome-wide Perturb-seq dataset;</p></li>
+<li><p>non-targeting control sgRNAs accounting for 5% of the total library.</p></li>
+</ol>
+<p>The Venn diagram shows that a few AMD-related candidate genes overlap.</p>
+<pre class="r"><code>knitr::include_graphics(&quot;assets/2025/figure/Oct/venn_amd_rpe1.png&quot;, error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="assets/2025/figure/Oct/venn_amd_rpe1.png" alt="overlapped AMD-related genes from GWAScatalog" width="50%" />
+<p class="caption">
+overlapped AMD-related genes from GWAScatalog
+</p>
+</div>
+</div>
+<div id="perturb-seq-single-cell-data-process" class="section level3">
+<h3>3. Perturb-seq single cell data process</h3>
+<p>Perturb-seq data was download from figshare. File name is rpe1_raw_singlecell_01.h5ad, which means raw, single-cell expression data for genes expressed at &gt;0.01 UMI per cell.</p>
+<p>In our HPC, I performed such quality control steps:</p>
+<ol start="0" style="list-style-type: decimal">
+<li><p>raw sc data <strong>[n_obs × n_vars = 247914 × 8749]</strong></p></li>
+<li><p>remove the cell without sgRNA <strong>[n_obs × n_vars = 247456 × 8749] (-458 cells)</strong></p></li>
+<li><p>check sgRNA_id mismatch target gene <strong>[n_obs × n_vars = 247456 × 8749] (PASS)</strong></p></li>
+<li><p>remove sgRNA carried by less than 20 cells <strong>[n_obs × n_vars = 244984 × 8749] (-189 cells)</strong></p></li>
+<li><p>tag MT-gene, conduct qc metrics</p></li>
+<li><p>remove cells with mito percent &gt; 20% <strong>[n_obs × n_vars = 244984 × 8749] (0 cells)</strong></p></li>
+<li><p>remove genes at chrX/Y, chrM <strong>[n_obs × n_vars = 244984 × 8469] (-280 genes)</strong></p></li>
+<li><p>remove outlier cells <strong>[n_obs × n_vars = 244493 × 8469] (-491 cells)</strong></p></li>
+</ol>
+<p>finally: n_obs × n_vars = 244493 × 8469; num sgRNA: 2201 target sgRNA + 1 non-targeting; non-targeting cells: 11473</p>
+</div>
+<div id="burden-test-association-of-amd-disease" class="section level3">
+<h3>4. Burden test association of AMD disease</h3>
+<p>Summary statistic was obtained from the UK Biobank, reported by Backman et al., Nature (2021). Data was downloaded from GWAS Catalog (GCST90083420).</p>
+<p>They provided odds ratios, so I converted them to beta using log(OR). I then selected the results that only include pLOF variants (MAF &lt; 0.01), corresponding to the M.001 flag.</p>
+<p>The P value distribution is that:</p>
+<pre class="r"><code>library(data.table)</code></pre>
+<pre><code>
+Attaching package: &#39;data.table&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:dplyr&#39;:
+
+    between, first, last</code></pre>
+<pre><code>The following object is masked from &#39;package:purrr&#39;:
+
+    transpose</code></pre>
+<pre class="r"><code>library(tidyverse)
+library(patchwork)
+
+burden_eff &lt;- fread(&#39;/project/xuanyao/qilong/Project/Core_Gene_Programs_II/03_burden_test/macular_degeneration/processed_data/LOF_burdenTest_M1.001_anno.tsv&#39;)
+burden_eff &lt;- burden_eff %&gt;% 
+  mutate(minlogp = -log10(p_value),
+         label_gene = gene_name)
+
+burden_eff$label_gene[which(burden_eff$p_value &gt; 0.001)] &lt;- NA
+
+p1_hist &lt;- ggplot(data = burden_eff, aes(x = p_value)) + 
+  geom_histogram(color = &#39;black&#39;, fill = &#39;royalblue&#39;, bins = 50) +
+  ggtitle(&quot;total genes: 14,261&quot;) +
+  theme_classic() +
+  theme(title = element_text(size = 10), 
+        axis.title = element_text(size = 12))
+
+p2_hist &lt;- ggplot(data = burden_eff[burden_eff$p_value &lt; 0.01, ], aes(x = p_value)) + 
+  geom_histogram(color = &#39;black&#39;, fill = &#39;royalblue&#39;) +
+  ggtitle(&quot;total genes: 120 (p value &lt; 0.01)&quot;) +
+  theme_classic() +
+  theme(title = element_text(size = 10), 
+        axis.title = element_text(size = 12))
+
+
+p3_valcano &lt;- ggplot(burden_eff, aes(x = beta, y = minlogp, label = label_gene)) + 
+  geom_point(size = 0.7) + 
+  ggrepel::geom_text_repel(size = 3) +
+  theme_classic()
+  
+p1_hist + p2_hist + p3_valcano + plot_layout(ncol = 2, nrow = 2, byrow = T)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/2025.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="trans-target-gene-pairs-association-using-sceptre" class="section level3">
+<h3>5. trans target-gene pairs association using SCEPTRE</h3>
+<p>I used all trans pairs to perform the calibration step, but the results still showed some inflation. I then plotted a stratified QQ plot by sgRNA.</p>
+<p>A total of 264 pairs showed a difference greater than 1.0 between the observed and expected P-values.</p>
+<pre class="r"><code>knitr::include_graphics(&quot;assets/2025/figure/Oct/plot_stratified_qqplot.png&quot;, error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="assets/2025/figure/Oct/plot_stratified_qqplot.png" alt="non-targeting sgRNA p value distribution" width="50%" />
+<p class="caption">
+non-targeting sgRNA p value distribution
+</p>
+</div>
+<p>And sceptre p value distribution is that:</p>
+<pre class="r"><code>knitr::include_graphics(&quot;assets/2025/figure/Oct/sceptre_rpe1_p_distribution.png&quot;, error = FALSE)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="assets/2025/figure/Oct/sceptre_rpe1_p_distribution.png" alt="SCEPTRE trans discovery pairs p value distribution" width="70%" />
+<p class="caption">
+SCEPTRE trans discovery pairs p value distribution
+</p>
+</div>
+</div>
+<div id="core-gene-identification-using-dandelion-and-otas-causal-model" class="section level3">
+<h3>6. Core gene identification using Dandelion and Ota’s causal model</h3>
+<p>Both two methods didn’t identify any signals. Possible reasons might include unmatched perturbed genes corresponding to the AMD trait and the much lower number of significant genes in the burden test (there is only one gene which passed the genome-wide threshold).</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1672,32 +1807,33 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] duckplyr_1.1.0       arrow_20.0.0.2       patchwork_1.3.1.9000
- [4] MASS_7.3-60          scales_1.3.0         forcats_0.5.1       
- [7] stringr_1.5.1        dplyr_1.1.4          purrr_1.0.2         
-[10] readr_1.4.0          tidyr_1.3.0          tibble_3.2.1        
-[13] ggplot2_3.5.1        tidyverse_1.3.1      workflowr_1.7.1     
+ [1] data.table_1.14.8    duckplyr_1.1.0       arrow_20.0.0.2      
+ [4] patchwork_1.3.1.9000 MASS_7.3-60          scales_1.3.0        
+ [7] forcats_0.5.1        stringr_1.5.1        dplyr_1.1.4         
+[10] purrr_1.0.2          readr_1.4.0          tidyr_1.3.0         
+[13] tibble_3.2.1         ggplot2_3.5.1        tidyverse_1.3.1     
+[16] workflowr_1.7.1     
 
 loaded via a namespace (and not attached):
  [1] httr_1.4.2        sass_0.4.9        bit64_4.6.0-1     jsonlite_1.8.7   
  [5] viridisLite_0.4.2 modelr_0.1.8      bslib_0.7.0       assertthat_0.2.1 
- [9] getPass_0.2-2     highr_0.11        cellranger_1.1.0  yaml_2.2.1       
-[13] collections_0.3.8 pillar_1.10.2     backports_1.4.1   glue_1.6.2       
-[17] digest_0.6.33     promises_1.2.0.1  rvest_1.0.0       colorspace_2.1-0 
-[21] htmltools_0.5.8.1 httpuv_1.6.1      pkgconfig_2.0.3   broom_0.7.8      
-[25] haven_2.4.1       processx_3.8.4    svglite_2.0.0     whisker_0.4.1    
-[29] later_1.2.0       git2r_0.32.0      generics_0.1.3    farver_2.1.1     
-[33] ellipsis_0.3.2    cachem_1.0.8      withr_2.5.2       cli_3.6.1        
-[37] magrittr_2.0.3    crayon_1.5.2      readxl_1.3.1      memoise_2.0.1    
-[41] evaluate_0.23     ps_1.7.5          fs_1.6.3          xml2_1.3.2       
-[45] tools_4.1.0       hms_1.1.0         lifecycle_1.0.4   munsell_0.5.0    
-[49] reprex_2.0.0      callr_3.7.6       kableExtra_1.4.0  compiler_4.1.0   
-[53] jquerylib_0.1.4   duckdb_1.3.1      systemfonts_1.1.0 rlang_1.1.6      
-[57] grid_4.1.0        rstudioapi_0.15.0 labeling_0.4.3    rmarkdown_2.27   
-[61] gtable_0.3.6      DBI_1.2.3         R6_2.5.1          lubridate_1.7.10 
-[65] knitr_1.48        fastmap_1.1.1     bit_4.0.5         rprojroot_2.0.4  
-[69] stringi_1.6.2     Rcpp_1.0.12       vctrs_0.6.4       dbplyr_2.1.1     
-[73] tidyselect_1.2.0  xfun_0.45        </code></pre>
+ [9] getPass_0.2-2     highr_0.11        cellranger_1.1.0  ggrepel_0.9.6    
+[13] yaml_2.2.1        collections_0.3.8 pillar_1.10.2     backports_1.4.1  
+[17] glue_1.6.2        digest_0.6.33     promises_1.2.0.1  rvest_1.0.0      
+[21] colorspace_2.1-0  htmltools_0.5.8.1 httpuv_1.6.1      pkgconfig_2.0.3  
+[25] broom_0.7.8       haven_2.4.1       processx_3.8.4    svglite_2.0.0    
+[29] whisker_0.4.1     later_1.2.0       git2r_0.32.0      generics_0.1.3   
+[33] farver_2.1.1      ellipsis_0.3.2    cachem_1.0.8      withr_2.5.2      
+[37] cli_3.6.1         magrittr_2.0.3    crayon_1.5.2      readxl_1.3.1     
+[41] memoise_2.0.1     evaluate_0.23     ps_1.7.5          fs_1.6.3         
+[45] xml2_1.3.2        tools_4.1.0       hms_1.1.0         lifecycle_1.0.4  
+[49] munsell_0.5.0     reprex_2.0.0      callr_3.7.6       kableExtra_1.4.0 
+[53] compiler_4.1.0    jquerylib_0.1.4   duckdb_1.3.1      systemfonts_1.1.0
+[57] rlang_1.1.6       grid_4.1.0        rstudioapi_0.15.0 labeling_0.4.3   
+[61] rmarkdown_2.27    gtable_0.3.6      DBI_1.2.3         R6_2.5.1         
+[65] lubridate_1.7.10  knitr_1.48        fastmap_1.1.1     bit_4.0.5        
+[69] rprojroot_2.0.4   stringi_1.6.2     Rcpp_1.0.12       vctrs_0.6.4      
+[73] dbplyr_2.1.1      tidyselect_1.2.0  xfun_0.45        </code></pre>
 </div>
 </div>
 </div>

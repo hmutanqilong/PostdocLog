@@ -332,3 +332,126 @@ kableExtra::kable(tmp)
 
 
 
+
+
+
+## Oct 22
+
+### 1 Collected and compiled public available Perturb-seq datasets
+
+I updated the Perturb-seq data summary document [link](https://docs.google.com/spreadsheets/d/1eXf6x3jSWxG3dgwhATYLRH8pcKLtk4-tJ3w-1xlDUzY/edit?usp=sharing), 
+and provided some phenotype information which these datasets could be applied to.
+
+### 2 Pilot cell line and disease
+
+We firstly select  **age-related macular degeneration (AMD) disease**, an eye's disorders, as a pilot trait,  because it is considered a well-established case in GWAS studies and has been identified some important core genes including CFH, ARMS2, and HTRA1. 
+
+The related perturbation data is based on RPE1 (retinal pigment epithelial) cell line, which was reported by Replogle et al., 2022, Cell.
+
+Here are some descriptions of this dataset.
+
+The RPE1 data in their paper was just perturbed a set of essential genes using CRISPRi tech. These essential genes include :
+ 
+ 1) 20Q1 Cancer Dependency Map common essential genes (https://depmap.org/portal/download/);
+ 
+ 2) a number of hand-selected genes with interesting phenotypes in the K562 genome-wide Perturb-seq dataset;
+ 
+ 3) non-targeting control sgRNAs accounting for 5% of the total library.
+ 
+The Venn diagram shows that a few AMD-related candidate genes overlap. 
+
+```{r out.width="50%", fig.cap="overlapped AMD-related genes from GWAScatalog"}
+knitr::include_graphics("assets/2025/figure/Oct/venn_amd_rpe1.png", error = FALSE)
+```
+
+### 3. Perturb-seq single cell data process
+
+Perturb-seq data was download from figshare. File name is rpe1_raw_singlecell_01.h5ad, which means raw, single-cell expression data for genes expressed at >0.01 UMI per cell.
+
+In our HPC, I performed such quality control steps:
+
+0. raw sc data **[n_obs × n_vars = 247914 × 8749]**
+    
+1. remove the cell without sgRNA **[n_obs × n_vars = 247456 × 8749] (-458 cells)**
+    
+2. check sgRNA_id mismatch target gene **[n_obs × n_vars = 247456 × 8749] (PASS)**
+
+3. remove sgRNA carried by less than 20 cells **[n_obs × n_vars = 244984 × 8749] (-189 cells)**
+
+4. tag MT-gene, conduct qc metrics
+
+5. remove cells with mito percent > 20% **[n_obs × n_vars = 244984 × 8749] (0 cells)**
+
+6. remove genes at chrX/Y, chrM **[n_obs × n_vars = 244984 × 8469] (-280 genes)**
+
+7. remove outlier cells **[n_obs × n_vars = 244493 × 8469] (-491 cells)**
+
+finally: n_obs × n_vars = 244493 × 8469; num sgRNA: 2201 target sgRNA + 1 non-targeting; non-targeting cells: 11473
+
+### 4. Burden test association of AMD disease
+
+Summary statistic was obtained from the UK Biobank, reported by Backman et al., Nature (2021). Data was downloaded from GWAS Catalog (GCST90083420).
+
+They provided odds ratios, so I converted them to beta using log(OR). I then selected the results that only include pLOF variants (MAF < 0.01), corresponding to the M.001 flag.
+
+The P value distribution is that:
+```{r}
+library(data.table)
+library(tidyverse)
+library(patchwork)
+
+burden_eff <- fread('/project/xuanyao/qilong/Project/Core_Gene_Programs_II/03_burden_test/macular_degeneration/processed_data/LOF_burdenTest_M1.001_anno.tsv')
+burden_eff <- burden_eff %>% 
+  mutate(minlogp = -log10(p_value),
+         label_gene = gene_name)
+
+burden_eff$label_gene[which(burden_eff$p_value > 0.001)] <- NA
+
+p1_hist <- ggplot(data = burden_eff, aes(x = p_value)) + 
+  geom_histogram(color = 'black', fill = 'royalblue', bins = 50) +
+  ggtitle("total genes: 14,261") +
+  theme_classic() +
+  theme(title = element_text(size = 10), 
+        axis.title = element_text(size = 12))
+
+p2_hist <- ggplot(data = burden_eff[burden_eff$p_value < 0.01, ], aes(x = p_value)) + 
+  geom_histogram(color = 'black', fill = 'royalblue') +
+  ggtitle("total genes: 120 (p value < 0.01)") +
+  theme_classic() +
+  theme(title = element_text(size = 10), 
+        axis.title = element_text(size = 12))
+
+
+p3_valcano <- ggplot(burden_eff, aes(x = beta, y = minlogp, label = label_gene)) + 
+  geom_point(size = 0.7) + 
+  ggrepel::geom_text_repel(size = 3) +
+  theme_classic()
+  
+p1_hist + p2_hist + p3_valcano + plot_layout(ncol = 2, nrow = 2, byrow = T)
+
+```
+
+### 5. trans target-gene pairs association using SCEPTRE
+
+I used all trans pairs to perform the calibration step, but the results still showed some inflation. I then plotted a stratified QQ plot by sgRNA.
+
+A total of 264 pairs showed a difference greater than 1.0 between the observed and expected P-values.
+
+```{r out.width="50%", fig.cap="non-targeting sgRNA p value distribution"}
+knitr::include_graphics("assets/2025/figure/Oct/plot_stratified_qqplot.png", error = FALSE)
+```
+
+And sceptre p value distribution is that:
+
+```{r out.width="70%", fig.cap="SCEPTRE trans discovery pairs p value distribution"}
+knitr::include_graphics("assets/2025/figure/Oct/sceptre_rpe1_p_distribution.png", error = FALSE)
+```
+
+### 6. Core gene identification using Dandelion and Ota's causal model
+
+Both two methods didn't identify any signals. Possible reasons might include unmatched perturbed genes corresponding to the AMD trait and the much lower number of significant genes in the burden test (there is only one gene which passed the genome-wide threshold).
+
+
+
+
+
